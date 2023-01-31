@@ -1,0 +1,7 @@
+@use './tools.scss' as tools;
+
+body {
+    @include tools.define-css-variables((
+        app-color-background: #fafafa,
+    ))
+}

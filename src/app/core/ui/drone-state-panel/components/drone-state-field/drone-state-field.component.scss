@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    padding: 4px 8px;
+    background-color: #ccc;
+    font-size: 14px;
+}
+
+.value {
+    height: 32px;
+    padding: 2px 8px 6px;
+    background-color: #eee;
+    font-size: 32px;
+
+    > *:first-child::after {
+        content: ' ';
+    }
+}
+
+.unit {
+    color: #666;
+    font-size: 24px;
+}
+

@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+}
+
+.state-field-group {
+    flex: 1;
+
+    &:not(:first-child) {
+        margin-left: 16px;
+    }
+}
+
+app-drone-state-field {
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+}

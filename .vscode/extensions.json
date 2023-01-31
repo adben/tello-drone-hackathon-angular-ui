@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "angular.ng-template",
+        "editorconfig.editorconfig",
+        "mike-co.import-sorter",
+        "dbaeumer.vscode-eslint"
+    ]
+}

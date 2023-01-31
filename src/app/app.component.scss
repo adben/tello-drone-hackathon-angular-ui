@@ -1,0 +1,36 @@
+mat-toolbar {
+    > *:not(:first-child) {
+        margin-left: 16px;
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .status-badge {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        .disconnected {
+            color: #600;
+        }
+
+        .connected {
+            color: #060;
+        }
+    }
+}
+
+.drone-output-panel {
+    display: flex;
+    margin: 32px;
+
+    app-drone-state-panel {
+        margin-left: 32px;
+        width: 320px;
+    }
+}

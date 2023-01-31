@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" *let="{ isDroneConnected: droneIsConnected$ | async:false } as vars">
+    <mat-icon svgIcon="quadcopter"></mat-icon>
+
+    <span>Tello Drone Controller</span>
+
+    <div class="spacer"></div>
+
+    <button mat-icon-button matTooltip="Start video stream" (click)="toggleVideoStream(true)">
+        <mat-icon svgIcon="video-outline"></mat-icon>
+    </button>
+
+    <button mat-icon-button matTooltip="Stop video stream" (click)="toggleVideoStream(false)">
+        <mat-icon svgIcon="video-off-outline"></mat-icon>
+    </button>
+
+    <button mat-icon-button matTooltip="Connect / Disconnect" (click)="toggleConnection()">
+        <mat-icon svgIcon="connection"></mat-icon>
+    </button>
+
+    <div class="status-badge">
+        <span *ngIf="!vars.isDroneConnected" class="disconnected">disconnected</span>
+        <span *ngIf="vars.isDroneConnected" class="connected">connected</span>
+    </div>
+</mat-toolbar>
+
+<div class="drone-output-panel">
+    <app-video-stream-outlet [videoStream]="droneVideoFrame$" [videoSize]="{ width: 960, height: 720 }"></app-video-stream-outlet>
+
+    <app-drone-state-panel [droneState]="droneState$ | async"></app-drone-state-panel>
+</div>
+

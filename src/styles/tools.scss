@@ -1,0 +1,7 @@
+@use 'sass:map';
+
+@mixin define-css-variables($variables) {
+    @each $name, $value in $variables {
+        --#{$name}: #{$value};
+    }
+}
