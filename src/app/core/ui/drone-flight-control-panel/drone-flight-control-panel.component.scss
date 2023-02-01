@@ -1,0 +1,23 @@
+:host {
+    display: inline-flex;
+
+    > *:not(:first-child) {
+        margin-left: 32px;
+    }
+}
+
+.control-group {
+    display: inline-flex;
+    flex-direction: column;
+
+    > *:not(:first-child) {
+        margin-top: 8px;
+    }
+}
+
+.control-group-with-input {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 4px;
+    row-gap: 8px;
+}

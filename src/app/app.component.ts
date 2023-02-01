@@ -8,6 +8,7 @@ import { ExtendedAsyncPipeWithUndefinedAsDefault } from 'ngx-extended-async-pipe
 
 import { DroneIsConnectedStream, DroneStateStream, DroneVideoStream } from './core/domain/drone';
 import { DroneService } from './core/domain/drone/drone.service';
+import { DroneFlightControlPanelComponent } from './core/ui/drone-flight-control-panel';
 import { DroneStatePanelComponent } from './core/ui/drone-state-panel';
 import { VideoStreamOutletComponent } from './core/ui/video-stream-outlet';
 import { LetDirective } from './shared/utils/angular';
@@ -29,6 +30,7 @@ import { pull } from './shared/utils/rxjs';
         MatTooltipModule,
         VideoStreamOutletComponent,
         DroneStatePanelComponent,
+        DroneFlightControlPanelComponent,
     ],
 })
 export class AppComponent {

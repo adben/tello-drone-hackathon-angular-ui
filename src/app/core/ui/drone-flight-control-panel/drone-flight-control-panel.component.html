@@ -1,0 +1,41 @@
+<div>
+    <div class="control-group">
+        <button mat-raised-button color="primary" (click)="takeoff()"><mat-icon svgIcon="arrow-up-circle-outline"></mat-icon> Takeoff</button>
+
+        <button mat-raised-button color="primary" (click)="land()"><mat-icon svgIcon="arrow-down-circle-outline"></mat-icon> Land</button>
+
+        <button mat-raised-button color="warn" (click)="emergencyStop()"><mat-icon svgIcon="close-octagon-outline"></mat-icon> Emergency stop</button>
+    </div>
+</div>
+
+<div>
+    <div class="control-group-with-input">
+        <button mat-raised-button color="primary" (click)="moveForward()">Move forward</button>
+        <input type="number" [formControl]="formControls.forwardDistance">
+
+        <button mat-raised-button color="primary" (click)="moveBackward()">Move backward</button>
+        <input type="number" [formControl]="formControls.backwardDistance">
+
+        <button mat-raised-button color="primary" (click)="moveLeft()">Move left</button>
+        <input type="number" [formControl]="formControls.leftDistance">
+
+        <button mat-raised-button color="primary" (click)="moveRight()">Move right</button>
+        <input type="number" [formControl]="formControls.rightDistance">
+
+        <button mat-raised-button color="primary" (click)="moveUp()">Move up</button>
+        <input type="number" [formControl]="formControls.upDistance">
+
+        <button mat-raised-button color="primary" (click)="moveDown()">Move down</button>
+        <input type="number" [formControl]="formControls.downDistance">
+    </div>
+</div>
+
+<div>
+    <div class="control-group-with-input">
+        <button mat-raised-button color="primary" (click)="turnLeft()">Turn left</button>
+        <input type="number" [formControl]="formControls.leftRotation">
+
+        <button mat-raised-button color="primary" (click)="turnRight()">Turn right</button>
+        <input type="number" [formControl]="formControls.rightRotation">
+    </div>
+</div>
