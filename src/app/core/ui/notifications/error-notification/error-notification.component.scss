@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    > .mat-icon-button:last-child {
+        margin-right: -8px;
+    }
+}
+
+::ng-deep .error-notification {
+    background-color: #800;
+}
+
+

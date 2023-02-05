@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { commit } from 'src/app/shared/utils/rxjs';
 
+import { TELLO_API_HTTP_CLIENT } from '../../api';
+
 @Injectable({ providedIn: 'root' })
 export class DroneService {
-    constructor(private readonly httpClient: HttpClient) {}
+    constructor(@Inject(TELLO_API_HTTP_CLIENT) private readonly httpClient: HttpClient) {}
 
     public connect(): Observable<void> {
         return this.sendCommand('connect');
@@ -35,28 +37,28 @@ export class DroneService {
         return this.sendCommand('flight/emergency-stop');
     }
 
-    public moveForward(distanceInCentimeters: number): Observable<void> {
-        return this.sendCommand(`flight/move-forward/${distanceInCentimeters}`);
+    public moveForward(distanceInMillimeters: number): Observable<void> {
+        return this.sendCommand(`flight/move-forward/${distanceInMillimeters}`);
     }
 
-    public moveBackward(distanceInCentimeters: number): Observable<void> {
-        return this.sendCommand(`flight/move-backward/${distanceInCentimeters}`);
+    public moveBackward(distanceInMillimeters: number): Observable<void> {
+        return this.sendCommand(`flight/move-backward/${distanceInMillimeters}`);
     }
 
-    public moveLeft(distanceInCentimeters: number): Observable<void> {
-        return this.sendCommand(`flight/move-left/${distanceInCentimeters}`);
+    public moveLeft(distanceInMillimeters: number): Observable<void> {
+        return this.sendCommand(`flight/move-left/${distanceInMillimeters}`);
     }
 
-    public moveRight(distanceInCentimeters: number): Observable<void> {
-        return this.sendCommand(`flight/move-right/${distanceInCentimeters}`);
+    public moveRight(distanceInMillimeters: number): Observable<void> {
+        return this.sendCommand(`flight/move-right/${distanceInMillimeters}`);
     }
 
-    public moveUp(distanceInCentimeters: number): Observable<void> {
-        return this.sendCommand(`flight/move-up/${distanceInCentimeters}`);
+    public moveUp(distanceInMillimeters: number): Observable<void> {
+        return this.sendCommand(`flight/move-up/${distanceInMillimeters}`);
     }
 
-    public moveDown(distanceInCentimeters: number): Observable<void> {
-        return this.sendCommand(`flight/move-down/${distanceInCentimeters}`);
+    public moveDown(distanceInMillimeters: number): Observable<void> {
+        return this.sendCommand(`flight/move-down/${distanceInMillimeters}`);
     }
 
     public turnLeft(rotationInDegrees: number): Observable<void> {

@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app/app.component';
 import { MaterialDesignIconsModule } from './app/core/ui/material-design-icons';
+import { NotificationModule } from './app/core/ui/notifications';
 import { environment } from './environments/environment';
 
 if (environment.production) {
@@ -12,5 +13,5 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent, {
-    providers: [importProvidersFrom(BrowserAnimationsModule, HttpClientModule, MaterialDesignIconsModule)],
+    providers: [importProvidersFrom(BrowserAnimationsModule, HttpClientModule, MaterialDesignIconsModule, NotificationModule)],
 });

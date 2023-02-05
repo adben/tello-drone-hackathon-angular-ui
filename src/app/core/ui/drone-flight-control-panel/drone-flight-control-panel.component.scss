@@ -21,3 +21,21 @@
     column-gap: 4px;
     row-gap: 8px;
 }
+
+input {
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 60px;
+
+    &:focus {
+        background-color: #eee;
+    }
+
+    &.ng-invalid {
+        border-color: #F00;
+        background-color: #FDD;
+        color: #800;
+    }
+}
