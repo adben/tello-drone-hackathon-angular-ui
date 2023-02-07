@@ -1,13 +1,13 @@
 {
     "/ws": {
-        "target": "ws://localhost:8080/",
+        "target": "ws://127.0.0.1:8081/",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug",
         "ws": true
     },
     "/api": {
-        "target": "ws://localhost:8080/",
+        "target": "ws://127.0.0.1:8081/",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
