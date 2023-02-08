@@ -85,6 +85,10 @@ export class DroneService {
         return this.sendCommand(`flight/track-blue`);
     }
 
+    public go(): Observable<void> {
+        return this.sendCommand(`chasing/balloons`);
+    }
+
     private sendCommand(command: string): Observable<void> {
         return this.httpClient.get(`/api/drone/${command}`).pipe(
             map(() => undefined),
