@@ -93,6 +93,22 @@ export class DroneFlightControlPanelComponent implements OnInit, OnDestroy {
         this.executeAction(() => this.droneService.turnRight(rotation), `turn ${rotation} degrees right`);
     }
 
+    public trackRed(): void {
+        this.executeAction(() => this.droneService.trackRed(), `track Red`);
+    }
+
+    public trackYellow(): void {
+        this.executeAction(() => this.droneService.trackYellow(), `track Yellow`);
+    }
+
+    public trackGreen(): void {
+        this.executeAction(() => this.droneService.trackGreen(), `track Green`);
+    }
+
+    public trackBlue(): void {
+        this.executeAction(() => this.droneService.trackBlue(), `track Blue`);
+    }
+
     private executeAction(action: Action, description: string): void {
         this.actionsSubject.next({ action, description });
     }

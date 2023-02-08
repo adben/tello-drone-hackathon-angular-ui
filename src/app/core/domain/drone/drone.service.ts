@@ -69,6 +69,22 @@ export class DroneService {
         return this.sendCommand(`flight/turn-right/${rotationInDegrees}`);
     }
 
+    public trackRed(): Observable<void> {
+        return this.sendCommand(`flight/track-red`);
+    }
+
+    public trackYellow(): Observable<void> {
+        return this.sendCommand(`flight/track-yellow`);
+    }
+
+    public trackGreen(): Observable<void> {
+        return this.sendCommand(`flight/track-green`);
+    }
+
+    public trackBlue(): Observable<void> {
+        return this.sendCommand(`flight/track-blue`);
+    }
+
     private sendCommand(command: string): Observable<void> {
         return this.httpClient.get(`/api/drone/${command}`).pipe(
             map(() => undefined),

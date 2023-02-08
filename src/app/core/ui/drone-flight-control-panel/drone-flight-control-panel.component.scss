@@ -22,6 +22,12 @@
     row-gap: 8px;
 }
 
+.control-group-track-color {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 input {
     outline: none;
     border: 1px solid #000;
